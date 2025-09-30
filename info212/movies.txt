@@ -1,5 +1,0 @@
-foo,bar
-Hello,World
-ok,da
-ja,men
-ja,men
