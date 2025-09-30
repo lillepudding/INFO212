@@ -1,5 +1,2 @@
-foo,bar
-Hello,World
-ok,da
-ja,men
-ja,men
+tomat1,2025,meg,test,noe.png
+tomat2,2025,meg,test,noe.png
