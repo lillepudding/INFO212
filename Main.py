@@ -51,9 +51,13 @@ print(movies)
 save_movies()
 
 
-@app.route("/info212/Filmside")
+@app.route("/Filmside")
 def test(name):
-    return "test"
+    return "<p>test</p>"
+
+@app.route("/")
+def hello_world():
+    return "<p>Hello, World!</p>"
 
 "ok"
 "ja"
