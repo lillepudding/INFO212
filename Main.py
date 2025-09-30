@@ -1,5 +1,6 @@
+from flask import Flask
 
-
+app = Flask(__name__)
 movies = {}
 
 class Movie:
@@ -50,7 +51,12 @@ print(movies)
 save_movies()
 
 
-
+@app.route("/info212/Filmside")
+def test(name):
+    return "test"
 
 "ok"
 "ja"
+
+if __name__ == '__main__':
+   app.run()
