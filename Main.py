@@ -54,15 +54,17 @@ save_movies()
 
 
 @app.route("/Filmside")
-def test(name):
+def test():
     return "<p>test</p>"
 
 @app.route("/")
 def hello_world():
     return render_template("FilmSide.html")
 
-"ok"
-"ja"
+@app.route("/movie_frame")
+def movie_frame():
+    return render_template("movie_frame.html")
+
 
 if __name__ == '__main__':
    app.run()
