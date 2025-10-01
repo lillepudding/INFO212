@@ -1,6 +1,8 @@
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask(__name__)
+
+
 movies = {}
 
 class Movie:
@@ -57,7 +59,7 @@ def test(name):
 
 @app.route("/")
 def hello_world():
-    return "<p>Hello, World!</p>"
+    return render_template("FilmSide.html")
 
 "ok"
 "ja"
