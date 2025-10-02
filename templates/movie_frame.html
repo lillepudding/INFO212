@@ -42,16 +42,16 @@
 </head>
 <body>
 
-    <h1>🍅 The Last Tomate (2024)</h1>
+    <h1>{{movie.title}}</h1>
 
-    <img src="tomato.jpg" alt="Poster: A brave red tomato on a garden background" class="poster">
+    <img src="tomato.jpg" alt="{{movie.title}}" class="poster">
 
     <div class="info">
-        <p><strong>Directed by:</strong> HW</p>
-        <p><strong>Genre:</strong> <span class="tag">Garden-Friendly</span> <span class="tag">Adventure</span> <span class="tag">Botanical Comedy</span></p>
+        <p><strong>Directed by:</strong> {{movie.director}}</p>
+        <p><strong>Genre:</strong> <span class="tag">{{movie.genre}}</span></p>
         
         <h3>Plot:</h3>
-        <p>In a world where all vegetables have vanished, one lone tomato survives. This humble red fruit—mistaken for a vegetable—holds the secret to restoring Earth's soil. With the help of a curious squirrel and a retired gardener, it embarks on an epic journey across abandoned farms and concrete jungles. Along the way, it learns about resilience, identity, and the true meaning of ‘ripe for change.’ A heartwarming tale of hope, botany, and one very brave tomato. Rated G for ‘Garden-friendly.’</p>
+        <p>{{movie.description}}</p>
     </div>
 
 </body>

@@ -174,7 +174,7 @@
             {% for movie in movies%}
                 <div class="movie-card">
                     <img src= "{{movie.image}}" alt="{{movie.title}}">
-                    <a href="/movie_frame" class="movie-title">{{movie.title}}</a>
+                    <a href="/movie_frame/{{movie.title}}" class="movie-title">{{movie.title}}</a>
                 </div>
             {% endfor %}
         </div>

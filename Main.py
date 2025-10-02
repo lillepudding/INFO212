@@ -69,9 +69,9 @@ def Filmside():
     movies = [movie_dict[x] for x in movie_dict]
     return render_template("FilmSide.html", test=test, movies=movies)
 
-@app.route("/movie_frame")
-def movie_frame():
-    return render_template("movie_frame.html")
+@app.route("/movie_frame/<movie>")
+def movie_frame(movie):
+    return render_template("movie_frame.html",movie=movie_dict[movie])
 
 
 if __name__ == '__main__':
