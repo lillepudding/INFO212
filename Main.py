@@ -2,7 +2,7 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
-
+'''
 movies = {}
 
 class Movie:
@@ -52,7 +52,7 @@ print(movies)
 print(movies)
 save_movies()
 
-
+'''
 @app.route("/Filmside")
 def test():
     return "<p>test</p>"
