@@ -3,8 +3,9 @@ from flask import Flask, render_template
 app = Flask(__name__)
 
 
-movie_dict = {}
+movies = {}
 
+'''
 class Movie:
     def __init__(self, title, year, director, description, genre, image):
         self.title = title
@@ -53,7 +54,7 @@ print(movie_dict)
 print(movie_dict)
 save_movies()
 
-
+'''
 @app.route("/Filmside")
 def test():
     return "<p>test</p>"
