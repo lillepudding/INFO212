@@ -1,4 +1,8 @@
 from flask import Flask, render_template
+from pathlib import Path
+
+ROOT_DIR = Path(__file__).parent
+
 
 app = Flask(__name__)
 
@@ -20,13 +24,13 @@ class Movie:
 
 
 def save_movies():
-    with open("info212/movies.txt", "w") as m:
+    with open(ROOT_DIR/"static/movies.txt", "w") as m:
         for movie in movie_dict:
             m.write(movie_dict[movie].info_string()+"\n")
 
 
 def load_movies():
-    with open("info212/movies.txt") as mo:
+    with open(ROOT_DIR/"static/movies.txt", "r") as mo:
         movie_list = mo.read().split("\n")[:-1]
         print(movie_list)
         for movie in movie_list:
@@ -37,7 +41,7 @@ def load_movies():
 
 def add_movie(movie):
     movie_dict[movie.title] = movie
-    with open("info212/movies.txt", "a") as m:
+    with open(ROOT_DIR/"static/movies.txt", "a") as m:
         m.write(movie.info_string()+"\n")
 
 def remove_movie(movie_name):
@@ -62,7 +66,7 @@ def test():
 @app.route("/")
 def Filmside():
     test = movie_dict["The last tomate"]
-    movies = [movie_dict["The last tomate"],movie_dict["tomat1"],movie_dict["tomat2"]]
+    movies = [movie_dict[x] for x in movie_dict]
     return render_template("FilmSide.html", test=test, movies=movies)
 
 @app.route("/movie_frame")

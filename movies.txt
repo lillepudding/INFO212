@@ -1,4 +1,0 @@
-tomat1,2025,meg,drama,test,noe.jpg
-tomat2,2025,meg,comedy,test,noe.png
-The last tomate,2025,meg,horror,story,static/images/tomato.jpg
-Moon vacation,2024,meg,horror,
