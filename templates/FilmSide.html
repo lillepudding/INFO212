@@ -171,9 +171,15 @@
             <button>🔍</button>
         </div>
         <div class="movie-grid">
+            {% for movie in movies%}
+                <div class="movie-card">
+                    <img src= "{{movie.image}}" alt="{{movie.title}}">
+                    <a href="/movie_frame" class="movie-title">{{movie.title}}</a>
+                </div>
+            {% endfor %}
             <div class="movie-card">
-                <img src="info212/tomato.jpg" alt="The Last Tomate">
-                <a href="/movie_frame" class="movie-title">The Last Tomate</a>
+                <img src= "{{test.image}}" alt="The Last Tomate">
+                <a href="/movie_frame" class="movie-title">{{test.title}}</a>
             </div>
 
             <div class="movie-card">

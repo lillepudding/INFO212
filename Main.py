@@ -3,24 +3,25 @@ from flask import Flask, render_template
 app = Flask(__name__)
 
 
-movies = {}
+movie_dict = {}
 
 class Movie:
-    def __init__(self, title, year, director, description, poster_path):
+    def __init__(self, title, year, director, description, genre, image):
         self.title = title
         self.year = year
         self.director = director
         self.description = description
-        self.poster_path = poster_path
+        self.genre = genre
+        self.image = image
     
     def info_string(self):
-        return self.title+","+str(self.year)+","+self.director+","+self.description+","+self.poster_path
+        return self.title+","+str(self.year)+","+self.director+","+self.description+","+self.genre+","+self.image
 
 
 def save_movies():
     with open("info212/movies.txt", "w") as m:
-        for movie in movies:
-            m.write(movies[movie].info_string()+"\n")
+        for movie in movie_dict:
+            m.write(movie_dict[movie].info_string()+"\n")
 
 
 def load_movies():
@@ -29,12 +30,12 @@ def load_movies():
         print(movie_list)
         for movie in movie_list:
             features = movie.split(",")
-            mov = Movie(features[0],features[1],features[2],features[3],features[4])
-            movies[mov.title] = mov
+            mov = Movie(features[0],features[1],features[2],features[3],features[4],features[5])
+            movie_dict[mov.title] = mov
 
 
 def add_movie(movie):
-    movies[movie.title] = movie
+    movie_dict[movie.title] = movie
     with open("info212/movies.txt", "a") as m:
         m.write(movie.info_string()+"\n")
 
@@ -44,12 +45,12 @@ def remove_movie(movie_name):
 
 
 def print_movies():
-    for movie in movies:
-        print(movies[movie].info_string())
+    for movie in movie_dict:
+        print(movie_dict[movie].info_string())
 
 load_movies()
-print(movies)
-print(movies)
+print(movie_dict)
+print(movie_dict)
 save_movies()
 
 
@@ -58,8 +59,10 @@ def test():
     return "<p>test</p>"
 
 @app.route("/")
-def hello_world():
-    return render_template("FilmSide.html")
+def Filmside():
+    test = movie_dict["The last tomate"]
+    movies = [movie_dict["The last tomate"],movie_dict["tomat1"],movie_dict["tomat2"]]
+    return render_template("FilmSide.html", test=test, movies=movies)
 
 @app.route("/movie_frame")
 def movie_frame():
@@ -69,5 +72,10 @@ def movie_frame():
 if __name__ == '__main__':
    app.run()
 
-#test
-#test2
+'''
+{% for message in get_flashed_messages() %}
+    <div class="flash">{{ message }}</div>
+  {% endfor %}
+  {% block content %}{% endblock %}
+'''
+#Brukes i filmside.html?

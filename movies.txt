@@ -1,2 +1,3 @@
-tomat1,2025,meg,test,noe.png
-tomat2,2025,meg,test,noe.png
+tomat1,2025,meg,,drama,test
+tomat2,2025,meg,comedy,test,noe.png
+The last tomate,2025,meg,horror,story,static/images/tomato.jpg
