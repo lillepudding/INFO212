@@ -1,5 +1,6 @@
 from flask import Flask, render_template
 from pathlib import Path
+from random import randint
 
 ROOT_DIR = Path(__file__).parent
 
@@ -69,9 +70,20 @@ def Filmside():
     movies = [movie_dict[x] for x in movie_dict]
     return render_template("FilmSide.html", test=test, movies=movies)
 
+@app.route("/register")
+def register():
+    return render_template("Bruker.html")
+
 @app.route("/movie_frame/<movie>")
 def movie_frame(movie):
-    return render_template("movie_frame.html",movie=movie_dict[movie])
+    return render_template("movie_frame.html",movie=movie_dict[movie],root=ROOT_DIR)
+
+@app.route("/recommendation")
+def recommendation():
+    keys = list(movie_dict.keys())
+    movie_num = randint(0, len(keys)-1)
+    rec = movie_dict[keys[movie_num]]
+    return render_template("movie_frame.html",movie=rec,root=ROOT_DIR)
 
 
 if __name__ == '__main__':

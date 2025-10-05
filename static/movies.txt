@@ -1,8 +1,8 @@
-tomat1,2025,meg,drama,test,noe.jpg
-tomat2,2025,meg,comedy,test,noe.png
-The last tomate,2025,meg,horror,story,static/images/tomato.jpg
-Moon vacation,2024,meg,horror,story,static/images/moon_vacation.jpg
-Puzzle planet,2023,meg,horror,story,static/images/puzzle_planet.jpg
-Robo dog,2022,meg,horror,story,static/images/robo_dog.jpg
-Rocket raccoon,2021,meg,horror,story,static/images/rocket_raccoon.jpg
-Soap bubbles,2020,meg,horror,story,static/images/soap_bubble.jpg
+tomat1,2025,meg,test,drama,noe.jpg
+tomat2,2025,meg,test,comedy,noe.png
+The last tomate,2025,meg,story,horror,static/images/tomato.jpg
+Moon vacation,2024,meg,story,horror,static/images/moon_vacation.jpg
+Puzzle planet,2023,meg,story,horror,static/images/puzzle_planet.jpg
+Robo dog,2022,meg,story,horror,static/images/robo_dog.jpg
+Rocket raccoon,2021,meg,story,horror,static/images/rocket_raccoon.jpg
+Soap bubbles,2020,meg,story,horror,static/images/soap_bubble.jpg
