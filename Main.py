@@ -1,6 +1,7 @@
 from flask import Flask, render_template
 from pathlib import Path
 from random import randint
+import sqlite3
 
 ROOT_DIR = Path(__file__).parent
 
@@ -74,7 +75,7 @@ def Filmside():
 def register():
     return render_template("Bruker.html")
 
-@app.route("/movie_frame/<movie>")
+@app.route("/<movie>")
 def movie_frame(movie):
     return render_template("movie_frame.html",movie=movie_dict[movie],root=ROOT_DIR)
 
