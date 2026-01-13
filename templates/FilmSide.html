@@ -174,10 +174,12 @@
         </div>
         <div class="movie-grid">
             {% for movie in movies%}
-                <div class="movie-card">
-                    <img src= "{{movie.image}}" alt="{{movie.title}}">
-                    <a href="/{{movie.title}}" class="movie-title">{{movie.title}}</a>
-                </div>
+
+                    <div class="movie-card" >
+                        <img src= "{{movie.image}}" alt="{{movie.title}}">
+                        <a href="/{{movie.title}}" class="movie-title">{{movie.title}}</a>
+                    </div>
+
             {% endfor %}
         </div>
     </div>
